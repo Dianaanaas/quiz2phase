@@ -1,5 +1,9 @@
 require("@babel/register");
 const express = require("express");
+const ssr = require("./middleware/render");
+const indexRouter = require("./routes/index.route");
+const morgan = require("morgan");
+const path = require("path");
 
 const app = express();
 
