@@ -1,5 +1,5 @@
 const React = require("react");
-// const Navbar = require("./Navbar");
+const Navbar = require("./Navbar");
 
 module.exports = function Layout({ title, children }) {
   //{title и children} - пропсы(всегда объект и это единственный способ передать в компонент какие-то данные).
@@ -8,12 +8,12 @@ module.exports = function Layout({ title, children }) {
     <html lang="en">
       <head>
         <title>{title}</title>
-        <link rel="stylesheet" href="/css/products.css" />
+        {/* <link rel="stylesheet" href="/css/products.css" /> */}
         {/* <script src="/js/script.js" /> */}
       </head>
 
       <body>
-        {/* <Navbar /> */}
+        <Navbar />
         {children}
       </body>
     </html>
