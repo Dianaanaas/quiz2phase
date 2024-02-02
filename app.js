@@ -14,9 +14,6 @@ app.use(morgan('dev'));
 app.use(ssr);
 
 app.use('/', indexRouter);
-
-
-
 app.listen(3000, () => {
-  console.log("Владимирский централ, ветер Serverный");
+  console.log('сервак запущен');
 });
