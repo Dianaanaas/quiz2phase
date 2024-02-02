@@ -3,14 +3,14 @@ module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.bulkInsert('Themes', [
       {
-        name: 'Фильмы',
-        img: 'https://tengrinews.kz/userdata/news/2023/news_511807/thumb_m/photo_445334.png',
+        name: 'Кино',
+        img: 'https://esquire.kz/wp-content/uploads/2022/12/memy.jpg',
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
-        name: 'Мультики',
-        img: 'https://tengrinews.kz/userdata/news/2023/news_511807/thumb_m/photo_445334.png',
+        name: 'Мемы',
+        img: 'https://cs12.pikabu.ru/post_img/big/2022/05/26/7/1653560579164255219.jpg',
         createdAt: new Date(),
         updatedAt: new Date(),
       },
