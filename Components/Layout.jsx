@@ -8,8 +8,8 @@ module.exports = function Layout({ title, children }) {
         <title>{title}</title>
         <link rel="stylesheet" href="/css/quest.css" />
         <script defer src="/scripts/questScript.js" />
+        <link rel="stylesheet" href="/css/theme.css" />
       </head>
-
       <body>
         {/* <Navbar /> */}
         {children}

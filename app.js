@@ -14,7 +14,6 @@ app.use(morgan('dev'));
 app.use(ssr);
 
 app.use('/', indexRouter);
-
 app.listen(3000, () => {
   console.log('сервак запущен');
 });
