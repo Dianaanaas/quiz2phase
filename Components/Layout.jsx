@@ -1,4 +1,4 @@
-const React = require("react");
+const React = require('react');
 // const Navbar = require("./Navbar");
 
 module.exports = function Layout({ title, children }) {
@@ -7,7 +7,7 @@ module.exports = function Layout({ title, children }) {
       <head>
         <title>{title}</title>
         <link rel="stylesheet" href="/css/quest.css" />
-        {/* <script src="/js/script.js" /> */}
+        <script defer src="/scripts/questScript.js" />
       </head>
 
       <body>
