@@ -12,6 +12,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Quest.init({
+    image: {
+      allowNull: false,
+      type: DataTypes.TEXT,
+    },
     title: {
       allowNull: false,
       type: DataTypes.TEXT,
