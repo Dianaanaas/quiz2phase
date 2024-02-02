@@ -1,0 +1,23 @@
+.score {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  background-color: rosybrown;
+  padding-right: 100px;
+}
+
+.rega {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rosybrown;
+  padding: 10px;
+}
+
+.formReg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rosybrown;
+  padding: 10px;
+}

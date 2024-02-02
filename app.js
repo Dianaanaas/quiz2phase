@@ -9,9 +9,14 @@ const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 
+app.use(express.json());
+
+
+
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(morgan('dev'));
 app.use(ssr);
+
 
 app.use('/', indexRouter);
 app.listen(3000, () => {

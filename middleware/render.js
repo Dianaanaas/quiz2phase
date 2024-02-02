@@ -18,4 +18,5 @@ function ssr(req, res, next) {
   res.renderComponent = renderComponent;
   next();
 }
+
 module.exports = ssr;
