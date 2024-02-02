@@ -15,7 +15,7 @@ if (authForm) {
     });
     const data = await res.json();
     if (data.message === "ok") {
-      window.location.assign("/");
+      window.location.assign("/themes");
     }
     res.json({ message: "No" });
   });

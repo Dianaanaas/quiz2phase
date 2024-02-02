@@ -1,5 +1,4 @@
 const router = require("express").Router();
-const React = require("react");
 const ThemeList = require("../Components/ThemeList");
 const { Theme } = require("../db/models");
 
@@ -13,5 +12,7 @@ router.get("/", async (req, res) => {
     res.send(message);
   }
 });
+
+
 
 module.exports = router;
