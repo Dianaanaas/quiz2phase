@@ -7,9 +7,12 @@ module.exports = function Layout({ title, children }) {
       <head>
         <title>{title}</title>
         <link rel="stylesheet" href="/css/regStyle.css" />
-        <script defer src="/scripts/auth.js" />
-      </head>
+        <link rel="stylesheet" href="/css/quest.css" />
+        <link rel="stylesheet" href="/css/theme.css" />
+          <script defer src="/scripts/questScript.js" />
+            <script defer src="/scripts/auth.js" />
 
+      </head>
       <body>
         <Navbar />
         {children}

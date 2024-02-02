@@ -7,8 +7,10 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of DataTypes lifecycle.
      * The `models/index` file will call this method automatically.
      */
+
     static associate({ Quest }) {
-      this.belongsTo(Quest, { foreignKey: "questId" });
+      this.belongsTo(Quest, { foreignKey: 'questId' });
+
     }
   }
   Answer.init(
