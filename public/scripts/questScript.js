@@ -1,24 +1,52 @@
-const oneAnswer = document.querySelector('.oneQuest');
+const oneQuest = document.querySelector('.cont');
 
-oneAnswer.addEventListener('click', async (e) => {
-  e.preventDefault();
-  console.log(e.target);
-  if (e.target.classList.contains('buttonAnswer')) {
-    const { id } = e.target.dataset;
-    if (id) {
+const buttonNext = document.querySelector('.buttonNext');
+
+if (oneQuest) {
+  oneQuest.addEventListener('click', async (e) => {
+    e.preventDefault();
+    if (e.target.classList.contains('buttonAnswer')) {
+      const { idanswer } = e.target.dataset;
+      if (idanswer) {
+        const res = await fetch(
+          `/api/questions/answer/${idanswer}`,
+          {
+            method: 'PUT',
+          },
+        );
+        const data = await res.json();
+        if (data.message === 'ок') {
+          const newText = document.querySelector('.text');
+          const scoreNavbar = document.querySelector('.scoreNavbar');
+          scoreNavbar.innerHTML = data.score;
+          newText.innerHTML = 'Ответ верный!';
+        }
+        if (data.message === 'плохо') {
+          const newText = document.querySelector('.text');
+          const scoreNavbar = document.querySelector('.scoreNavbar');
+          scoreNavbar.innerHTML = data.score;
+          newText.innerHTML = 'Ответ неверный!';
+        }
+      }
+    }
+  });
+}
+if (buttonNext) {
+  buttonNext.addEventListener('click', async (e) => {
+    const { idquest } = e.target.dataset;
+    if (idquest) {
       const res = await fetch(
-        '/quest/',
+        `/api/questions/${idquest}`,
         {
           method: 'PUT',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            id,
-          }),
         },
       );
+
+      const data = await res.json();
+      console.log(data, '-------------');
+      if (data.message === 'ок') {
+        document.querySelector('.cont').innerHTML = data.html;
+      }
     }
-    console.log(id);
-  }
-});
+  });
+}
