@@ -8,7 +8,7 @@ module.exports = function Layout({ title, children }) {
     <html lang="en">
       <head>
         <title>{title}</title>
-        <link rel="stylesheet" href="/css/products.css" />
+        <link rel="stylesheet" href="/css/theme.css" />
         {/* <script src="/js/script.js" /> */}
       </head>
 
