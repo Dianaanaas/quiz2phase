@@ -1,8 +1,8 @@
 const React = require("react");
 
-function Navbar() {
+function Navbar({ user }) {
   return (
-    <div className >
+    <div className="score">
       <p>Score:</p>
     </div>
   );

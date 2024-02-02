@@ -7,11 +7,12 @@ const indexRouter = require("./routes/index.route");
 
 const app = express();
 
-app.use(express.urlencoded({ extended: true })); //даем разрешение на чтение(если метод POST)
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 app.use(express.static(path.join(__dirname, "public")));
-app.use(morgan("dev")); //подключили морган
-app.use(ssr); //подключили мидлварку
+app.use(morgan("dev"));
+app.use(ssr);
 
 app.use("/", indexRouter);
 
