@@ -11,7 +11,7 @@ function ThemeList({ thems, title, user }) {
         {thems.map((theme) => (
           <div key={theme.name}>
             <h2 className ='themeName'>{theme.name}</h2>
-            <a href={`/theme/${theme.id}/quest`}>
+            <a href={`/themes/${theme.id}/quest`}>
             <img className = 'themeCover' src ={theme.img} alt={theme.name}/>
             </a>
           </div>
