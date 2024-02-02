@@ -1,16 +1,22 @@
-require("@babel/register");
-const express = require("express");
-const ssr = require("./middleware/render");
-const indexRouter = require("./routes/index.route");
-const morgan = require("morgan");
-const path = require("path");
+require('@babel/register');
+const express = require('express');
+const morgan = require('morgan');
+const path = require('path');
+const ssr = require('./middleware/render');
+const indexRouter = require('./routes/index.route');
 
 const app = express();
 
-app.get("/", function (req, res) {
-  res.send("Hello, world");
-});
+app.use(express.urlencoded({ extended: true }));
+
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(morgan('dev'));
+app.use(ssr);
+
+app.use('/', indexRouter);
+
+
 
 app.listen(3000, () => {
-  console.log("сервак запущен");
+  console.log("Владимирский централ, ветер Serverный");
 });

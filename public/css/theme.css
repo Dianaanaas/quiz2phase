@@ -1,0 +1,42 @@
+body {
+  background-image: url("https://kartinki.pics/pics/uploads/posts/2022-08/1661207981_1-kartinkin-net-p-izobrazhenie-dlya-fona-saita-krasivo-1.jpg"); /* Путь к вашей картинке */
+  background-size: cover;
+  background-position: center;
+  
+  font-family: Arial, sans-serif;
+  
+}
+
+.themeContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.themeName {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #f8f2f2;
+}
+
+.themeCover {
+  max-width: 400px;
+  height: auto;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 0 20px 5px #ebeeeb;
+}
+.themeCover:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 40px 10px #ebeeeb;
+}
+
+.header {
+  text-align: center;
+  color: #f8f2f2;
+  font-size: 34px;
+  margin-bottom: 20px;
+}
