@@ -5,7 +5,6 @@ function Form({ title, user }) {
   return (
     <Layout title={title} user={user}>
       <h1 className="rega">Регистрация</h1>
-      <h3>{user?.name}</h3>
       <div className="formReg">
         <form className="authForm" action="/">
           <input className='inputReg' placeholder="Введите имя" name="name" />

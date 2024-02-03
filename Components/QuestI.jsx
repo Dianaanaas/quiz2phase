@@ -6,10 +6,10 @@ function QuestI({ quest }) {
 
     <div className="oneQuest">
       <div>
-        {quest.title}
+        <img className='imageQuest' src={quest.image} alt="" />
       </div>
       <div>
-        <img src={quest.image} alt="" />
+        {quest.title}
       </div>
       <div className="answers">
         {quest.Answers.map((el) => <button className="buttonAnswer" type="button" data-idAnswer={el.id}>{el.name}</button>)}

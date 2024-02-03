@@ -81,7 +81,7 @@ module.exports = {
       },
       {
         image: 'https://risovach.ru/upload/2014/07/mem/nelzya-prosto-tak-vzyat-i-boromir-mem_54809432_orig_.jpg',
-        title: 'Что показывает Боромир',
+        title: 'Что показывает Боромир ?',
         themeId: 2,
         createdAt: new Date(),
         updatedAt: new Date(),
