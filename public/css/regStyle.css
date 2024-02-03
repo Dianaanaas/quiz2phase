@@ -2,22 +2,37 @@
   display: flex;
   flex-direction: column;
   align-items: end;
-  background-color: rosybrown;
   padding-right: 100px;
+  color:aliceblue;
 }
 
 .rega {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rosybrown;
   padding: 10px;
+  color:aliceblue;
 }
 
 .formReg {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background-color: rosybrown;
-  padding: 10px;
+  align-items: center; 
+  padding: 20px;
+  
+}
+
+.buttonnReg {
+  box-shadow: 0 0 20px 5px #ebeeeb;
+  margin-top: 10px; 
+  width: 100px; 
+  padding: 6px 10px 6px 10px;
+  margin: 0 0 0 10px;
+}
+
+.inputReg {
+  box-shadow: 0 0 20px 5px #ebeeeb;
+  margin-bottom: 10px; 
+  width: 200px;
+  padding: 6px 10px 6px 10px; 
 }

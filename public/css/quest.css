@@ -1,16 +1,48 @@
 .oneQuest {
+    color: white;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .oneQuest div {
+    margin-bottom: 10px;
+  }
+  
+  .answers {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    margin: 200px;
-    height: 300px;
-    font-size: 25px;
-}
-
-.answers {
+  }
+  
+  .buttonAnswer {
+    background-color: #0c0c0c;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .centered-container{
+    display: flex;
+    justify-content: center; 
+  }
+  .buttonNext {
+    background-color: #927b7b;
+    color: #fcfafa;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    height: 100px;
-}
+    align-items: center;
+  }
+  
+  .text {
+    margin-top: 30px;
+  }
