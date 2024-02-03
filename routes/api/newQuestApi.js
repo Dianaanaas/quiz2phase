@@ -8,13 +8,13 @@ router.put('/:id', async (req, res) => {
     const { id } = req.params;
     const newId = +req.params.id + 1;
     const oneQuest = await Quest.findOne({ where: { id: newId }, include: { model: Answer } });
-  
-    const arr = await Quest.findAll({ where: { themeId: oneQuest.themeId } });
-    if (oneQuest) {
+
+    const obj = await Quest.findOne({ where: { id } });
+    if (oneQuest && oneQuest.themeId === obj.themeId) {
       const html = res.renderComponent(QuestI, { quest: oneQuest });
       res.json({ html, message: 'ок' });
     } else {
-      res.redirect('/themes');
+      res.json({ message: 'ne ok' });
     }
   } catch ({ message }) {
     res.send(message);

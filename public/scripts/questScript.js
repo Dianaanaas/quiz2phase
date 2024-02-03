@@ -1,10 +1,8 @@
 const oneQuest = document.querySelector('.cont');
 
-const buttonNext = document.querySelector('.buttonNext');
-
 if (oneQuest) {
   oneQuest.addEventListener('click', async (e) => {
-    e.preventDefault();
+    console.log(e.target, 'ttttt');
     if (e.target.classList.contains('buttonAnswer')) {
       const { idanswer } = e.target.dataset;
       if (idanswer) {
@@ -28,24 +26,23 @@ if (oneQuest) {
           newText.innerHTML = 'Ответ неверный!';
         }
       }
-    }
-  });
-}
-if (buttonNext) {
-  buttonNext.addEventListener('click', async (e) => {
-    const { idquest } = e.target.dataset;
-    if (idquest) {
-      const res = await fetch(
-        `/api/questions/${idquest}`,
-        {
-          method: 'PUT',
-        },
-      );
+    } else if (e.target.classList.contains('buttonNext')) {
+      const { idquest } = e.target.dataset;
+      if (idquest) {
+        const res = await fetch(
+          `/api/questions/${idquest}`,
+          {
+            method: 'PUT',
+          },
+        );
 
-      const data = await res.json();
-      console.log(data, '-------------');
-      if (data.message === 'ок') {
-        document.querySelector('.cont').innerHTML = data.html;
+        const data = await res.json();
+        console.log(data, '-------------');
+        if (data.message === 'ок') {
+          document.querySelector('.cont').innerHTML = data.html;
+        }else{
+          window.location.assign('/themes')
+        }
       }
     }
   });
