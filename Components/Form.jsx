@@ -4,12 +4,12 @@ const Layout = require("./Layout");
 function Form({ title, user }) {
   return (
     <Layout title={title} user={user}>
-      <h2 className="rega">Регистрация</h2>
+      <h1 className="rega">Регистрация</h1>
       <h3>{user?.name}</h3>
       <div className="formReg">
         <form className="authForm" action="/">
-          <input placeholder="Введите имя" name="name" />
-          <button>Вперед</button>
+          <input className='inputReg' placeholder="Введите имя" name="name" />
+          <button className='buttonnReg'>Вперед</button>
         </form>
       </div>
     </Layout>
